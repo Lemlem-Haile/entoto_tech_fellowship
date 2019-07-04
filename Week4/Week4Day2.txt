@@ -1,0 +1,246 @@
+1//SELECT
+SELECT CustomerName,City FROM Customers; 
+*it selects from the table only the customername and city of it.
+
+2//SELECT * FROM Customers; 
+it selects or shows all the table content
+
+3//DISTINCT
+SELECT DISTINCT City FROM Customers; 
+leaves the repeated one and displays only unique section
+
+4//WHERE
+SELECT * FROM Customers WHERE CustomerID=1;
+selects the wanted row
+
+5//BETWEEN
+​SELECT * FROM `customers` WHERE CustomerName BETWEEN 'A' AND 'B';
+selects the customersname b/n this letters
+
+6//Like
+SELECT * FROM `customers` WHERE City LIKE 's%';
+selects city starts with s letter
+7//LIKE
+SELECT * FROM `customers` WHERE City LIKE '%s%'; 
+selects city that has s letter
+
+8//SQL Aliases
+SELECT City AS  Town FROM customers;
+renames the columns or table name temporarily
+
+9//SQL INNER JOIN
+SELECT Orders.OrderID, customers.CustomerName,orders.OrderDate FROM Orders INNER JOIN customers ON Orders.CustomerID=customers.CustomerID;
+alternate the CustomerID to customername and puts the customername b/n the orderID and OrderDate
+
+10//LEFT JOIN
+SELECT customers.CustomerName,orders.OrderID  FROM customers LEFT JOIN orders ON customers.CustomerID=orders.CustomerID ORDER BY customers.CustomerName;
+returns ol the left table but gives a value to the called column
+
+11//RIGHT JOIN
+SELECT Orders.OrderID, customers.CustomerName,orders.OrderDate FROM Orders RIGHT JOIN customers ON Orders.CustomerID=customers.CustomerID ORDER BY orders.OrderID;
+
+12//FULL JOIN
+Not working
+
+13//AND
+SELECT * FROM Customers WHERE Country='Germany' AND City='Berlin';
+prints only when both statements are true
+
+14//OR
+SELECT * FROM Customers WHERE Country='Germany' OR City='AA';
+if both or one condition comes true it displays the out put
+
+15//Combining AND/OR
+SELECT * FROM Customers WHERE Country='Germany' AND (City='Berlin' OR City='München');
+ displays only if the whole condition becomes trut 
+ 
+ 16//OR/AND
+ displays if one condition is true
+
+ 17//sorting/ordering (Ascending/Descending)
+ SELECT column_name, column_name FROM table_name ORDER BY column_name ASC|DESC, column_name ASC|DESC;
+ if the operation is in ascending order it sorts from the top-bottom
+ esle the operation is in descending order it sorts from the bottom-top
+ 
+ 18//Inser INTO
+ INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country) VALUES ('Cardinal','Tom B. Erichsen','Skagen 21','Stavanger','4006','Norway'); 
+ used to insert new values
+ 
+ 19//Select LIMIT
+ SELECT  * FROM customers LIMIT 4;
+ selects from index 0-3
+ 
+ 20//SQL % Wildcard
+ SELECT * FROM `customers` WHERE City LIKE 'Lon%';
+ searches/finds city starts with the given character
+ 
+21 //SQL IN
+ SELECT * FROM `customers` WHERE CustomerID IN (3,6);
+ displays the called CustomerID
+ 
+ 
+ 22//Update
+ UPDATE Customers
+SET ContactName='Alfred Schmidt', City='Hamburg' WHERE CustomerName='Alfreds Futterkiste';  
+2 rows/records are changed/affected  
+
+23//Not Equal
+SELECT * FROM Customers WHERE CustomerID<>1;
+filters the first ID and displays the others
+
+24//Greater than or eqaul to
+SELECT * FROM Customers WHERE CustomerID>=4;
+displays from CustomerID = 4 upto the last one
+
+25//UNION
+SELECT CustomerID FROM customers UNION SELECT CustomerID FROM orders ORDER BY CustomerID;
+prints all the CustomerID in the both tables,when we work with union operator the selected columns must have the same numbers and the data types must be the same
+
+26//SELECT INTO  Statements
+copies data from one table and inserts it into a new table
+doesn't work
+
+27//INSERT INTO SELECT Statements
+copies data from one table and inserts it into an existing table
+INSERT INTO customers SELECT * FROM orders;
+INSERT INTO customers(CustomerName, Country) SELECT SupplierName, Country FROM suppliers;
+
+28//CREATE DATABASE
+CREATE DATABASE my_db;
+creates new database
+
+29//CREATE TABLE
+CREATE TABLE Persons
+(
+PersonID int,
+FirstName varchar(255),
+LastName varchar(255),
+Address varchar(255),
+City varchar(255)
+);
+creates new table
+
+30//  NOT NULL Constraints
+puts a rule for our table
+CREATE TABLE PersonsNotNull
+(
+PersonID int NOT NULL,
+FirstName varchar(255)NOT NULL ,
+LastName varchar(255)NOT NULL,
+Address varchar(255)NOT NULL,
+City varchar(255)
+);
+
+31// UNIQUE Constraints
+uniquely identifies each records/rows, guarantee for uniqueness for a column or set of columns
+CREATE TABLE Persons1
+(
+PersonID int NOT NULL UNIQUE,
+FirstName varchar(255)NOT NULL ,
+LastName varchar(255)NOT NULL,
+Address varchar(255)NOT NULL,
+City varchar(255)
+);
+
+32//PRIMARY KEY Constraints
+It's the same as unique constraints but primary key column cannot contain null values
+CREATE TABLE Persons2
+(
+PersonID int NOT NULL,
+FirstName varchar(255)NOT NULL ,
+LastName varchar(255)NOT NULL,
+Address varchar(255)NOT NULL,
+City varchar(255),
+PRIMARY KEY(PersonID)            
+)
+
+33//PRIMARY KEY Constraints on ALTER TABLE
+ALTER TABLE persons ADD PRIMARY KEY (PersonID)
+
+34//Drop PRIMARY KEY Constraints
+ALTER TABLE persons DROP PRIMARY KEY;
+delete or drop the primary key
+
+35//Foreign Key Constraints on create table
+CREATE TABLE Orders1 
+(
+O_Id int NOT NULL,
+orderNo int NOT NULL,
+P_Id int,
+PRIMARY KEY (O_Id),
+FOREIGN KEY (P_Id) REFERENCES persons(P_Id)    
+)
+//@@@@
+CREATE TABLE Orders2 
+(
+O_Id int NOT NULL,
+orderNo int NOT NULL,
+P_Id int,
+PRIMARY KEY (O_Id),
+CONSTRAINT fk_PerOrders FOREIGN KEY (P_Id) 
+REFERENCES persons(P_Id)    
+)
+
+36//Foreign Key Constraint on ALTER table
+ALTER TABLE orders1
+ADD FOREIGN KEY (P_Id)
+REFERENCES persons (P_Id)
+
+//@@@@
+ALTER TABLE orders1
+ADD CONSTRAINT fk_Perorders
+FOREIGN KEY (P_Id)
+REFERENCES persons (P_Id)
+
+37//Drop a foreign key constraint
+drop a foreign key
+ALTER TABLE orders1 
+DROP FOREIGN KEY fk_perorders;
+
+38//SQL Check Constraint on Create TABLE
+CREATE TABLE persons3
+(
+PersonID  int NOT NULL,
+FirstName varchar(255) NOT NULL,
+LastName varchar(255),
+Address varchar(255),
+City varchar(255),
+CONSTRAINT chk_person CHECK (PersonID>0 AND City='Sandnes')
+)
+
+39//SQL Check Constraint on ALTER TABLE
+ALTER TABLE Persons
+ADD CHECK (p_ID>0)
+
+40//CREATE Index
+CREATE INDEX PIndex 
+ON persons (FirstName, LastName)
+
+41//SQL Auto increment field
+CREATE TABLE Persons4
+(
+PersonID int NOT NULL AUTO_INCREMENT,
+FirstName varchar(255)NOT NULL ,
+LastName varchar(255)NOT NULL,
+Address varchar(255),
+City varchar(255),
+PRIMARY KEY(PersonID)            
+)
+
+42//Create View
+CREATE VIEW [current product list] AS
+SELECT ProductID, ProductName
+FROM Products
+WHERE Discontinued=No
+
+43//SQL Dates
+SELECT * FROM orders WHERE OrderDate='1996-09-18'
+
+44//SQL IS NULL
+SELECT  CustomerName, ContactName,Address FROM customers WHERE Address IS NULL
+
+45//SQL NULL FUNCTION
+SELECT ProductName, UnitPrice*(UnitsInStock + IFNULL (UnitsOnorder, 0)) FROM products
+
+
+

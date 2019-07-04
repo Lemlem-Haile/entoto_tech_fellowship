@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Account</title>
+    <style>
+    .SignUP{
+        background-color: whitesmoke;
+    }
+    </style>
+    <script>
+    var info = {
+        FirstName: "",
+        LastName: "",
+        Pnone: "",
+        Email:"",
+        Username: "",
+        Password: ""
+}
+function user(){
+   
+var username = document.getElementById('username').value;
+var password = document.getElementById('psw').value;
+  if (username == info.username && password == info.password ){
+      window.open("./Week2-Project Home Page.html")
+    //   alert('correct username or password');
+   } else {
+       alert('Fill out the field');
+   }
+}
+</script>
+</head>
+<body>
+        <a class="flex-box" href="Week2-Project Login Page.html"><b>Login</b></a>
+    <div class= "SignUP">
+        <form>
+            <fieldset>
+        <legend>Personal Information:</legend>
+        <h1 style="color: rgb(6, 6, 10);">Create Account</h1> 
+        First Name: <input type="fname" placeholder=""><br><br>
+        Last Name: <input type="lname" placeholder=""><br><br>
+        Phone: <input type="number" placeholder=""><br><br>
+        Email: <input type="email" placeholder=""><br><br>
+        Username: <input type="username" placeholder=""><br><br>
+        Password: <input type="password" name="psw"><br><br>
+       <input type="radio" name="gender" value="male" checked> Female<br>
+        <input type="radio" name="gender" value="female"> Male<br>
+        <button onclick="user()">Create</button><br><br>
+
+    </fieldset>
+    </form>
+    </div>
+</body>
+</html>

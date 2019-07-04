@@ -1,0 +1,39 @@
+body{
+    background-color: grey; width: 100%; height: 5%;
+    font-size: 15px;
+    font-style: italic
+}
+h3{
+    color: black;
+}
+header{
+    background-color: whitesmoke; width: 100%; height: 5%;
+    font-size: 20px;
+}
+nav{
+ color: grey;
+ justify-content: flex-end;
+ display: flex; 
+ flex-direction: row;
+}
+nav h4{
+    margin-left:15px;
+    margin-right:15px;
+}
+nav{
+    justify-content: flex-end;
+    display: flex; 
+    flex-direction: row;
+}
+.img1{
+    border-radius: 90px; 
+    margin-left: 15px;
+}
+footer{
+background-color: whitesmoke; width: 100%; height: 5%;
+font-size: 20px;
+color: cadetblue;
+}
+h5{
+    color: black; 
+}
