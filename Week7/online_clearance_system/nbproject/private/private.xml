@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/createaccount.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/template/officeHeader.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/studentSignup.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/homeAdmin.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/Controller/AccountController1.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/Model/offices.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/studentLogin.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/Model/Request.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/template/header.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/aboutOffice.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/Delete.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/template/adminheader.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/setting.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/officeLogin.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/viewStatus.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/viewRequest.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/assigninterviewr.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/Model/Status.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/Model/Student.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/homeOffice.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/sendRequest.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/landing.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/Controller/RequestController.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/Model/Office.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/home.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/Controller/AccountController.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/aboutAdmin.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/template/footer.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/about.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/adminLogin.php</file>
+            <file>file:/C:/wamp64/www/online_clearance_system/View/login1.php</file>
+        </group>
+    </open-files>
+</project-private>
